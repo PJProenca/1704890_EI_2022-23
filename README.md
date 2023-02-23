@@ -4,3 +4,4 @@ Paulo Proença 1704890
 
 Engenharia Informática, Inteligencia Artificial
 
+![plot](./images/IA.jpg)
