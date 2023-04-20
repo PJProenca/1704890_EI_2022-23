@@ -18,8 +18,8 @@ Aluno: Paulo Proença, 1704890,
 ### 2. Imprementação do Trabalho	
 ### 3. Funcionamento do trabalho	
 ### 4. Conclusão					
-Bibliografia	
-
+### Bibliografia	
+![alt text](./images/ipg.png)
 
 #### 1. Descrição do Trabalho
 // breve descrição do que consiste o trabalho
