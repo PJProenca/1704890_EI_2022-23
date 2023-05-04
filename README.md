@@ -28,7 +28,7 @@ Aluno: Paulo Proença, 1704890,
 
 #### 2.Imprementação do Trabalho	
   // descrever a implemantação e explicá-la (função, cliente, server)
-![alt text] (./imagens/Arquitectura.png)
+![alt text](./images/Arquitectura.png)
   
 
 #### 3.Funcionamento do trabalho	
