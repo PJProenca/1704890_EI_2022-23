@@ -1,15 +1,20 @@
 import random
-from flask import Flask,jsonify
+from flask import Flask,jsonify,request,render_template
 import requests
 import json
 import sys
 from datetime import datetime
 
 
+user_type = ''
 app= Flask(__name__)
-@app.route('/')
-def index():
-     return "Welcome to the Number Generator"
+# @app.route('/')
+# def index():
+#     global user_type
+#     user_type = request.headers.get('User-Agent')
+#     if 'Mozilla' in user_type:
+#         return render_template('index.html',data='data')
+#     return "Welcome to the Number Generator"
 
 
 def getTemp():
@@ -44,13 +49,16 @@ def overflowHandler(num):
             treated_num += ch
     return treated_num
 
-@app.route('/generate')
+@app.route('/')
 def generate():
     num =xorCalc()
     bin_num = overflowHandler(num)
     date= datetime.now().strftime("%d-%B-%Y")
     time = datetime.now().strftime("%H:%M:%S")
     data ={'Number': int(bin_num,2),'Binary value':bin_num,'Date':date,'Time':time}
+    user_type = request.headers.get('User-Agent')
+    if 'Mozilla' in user_type:
+        return render_template('index.html' ,data=data)
     return jsonify(data)
 
 if __name__ == '__main__':
