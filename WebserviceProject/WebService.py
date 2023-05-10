@@ -58,8 +58,9 @@ def generate():
     data ={'Number': int(bin_num,2),'Binary value':bin_num,'Date':date,'Time':time}
     user_type = request.headers.get('User-Agent')
     if 'Mozilla' in user_type:
-        return render_template('index.html' ,data=data)
+        return render_template('index.html',data=data)
     return jsonify(data)
+
 
 if __name__ == '__main__':
     app.run()
